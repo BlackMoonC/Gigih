@@ -1,0 +1,104 @@
+* {
+  margin: 0 0;
+  padding: 0 0;
+}
+
+body {
+  background-color: #2c302e;
+  margin: 0 0 36px 0;
+}
+
+header {
+  background-color: green;
+  padding: 10px 14px;
+}
+
+main {
+  margin: 24px;
+}
+h1,
+h3,
+p {
+  color: white;
+}
+
+ol {
+  margin-left: 14px;
+  font-size: x-large;
+}
+
+ol p {
+  color: black;
+}
+
+.item-list {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item-list:hover {
+  background-color: #474a48;
+  margin: 6px;
+  padding: 4px;
+  border-radius: 20px;
+}
+
+.item-list img {
+  margin-left: 12px;
+  height: 2.8rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+button {
+  background-color: transparent;
+  border: transparent;
+}
+
+section {
+  margin: 24px 9px;
+}
+
+.song-information {
+  display: flex;
+  align-items: center;
+}
+
+.song-information p {
+  margin-left: 12px;
+}
+
+.card-list-song {
+  padding: 14px 0;
+}
+
+.card-list-item {
+  background-color: #474a48;
+  border: 0.1rem solid gray;
+  border-radius: 12px;
+  width: 9rem;
+  margin: 0 0 0 1.5rem;
+  padding: 0 0 15px 0;
+}
+
+.card-list-item:hover {
+  background-color: #909590;
+  margin-top: 15px;
+  padding-bottom: 0 !important;
+}
+
+.card-list-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.card-body {
+  margin: 4px 8px;
+}
+
+.card-list-song {
+  margin: 14px 0;
+  display: flex;
+}
