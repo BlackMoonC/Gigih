@@ -20,6 +20,7 @@ h1,
 h3,
 p {
   color: white;
+  
 }
 
 ol {
@@ -96,9 +97,10 @@ section {
 
 .card-body {
   margin: 4px 8px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .card-list-song {
   margin: 14px 0;
-  display: flex;
 }
