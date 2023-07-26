@@ -1,0 +1,14 @@
+.nama-tag{
+    font-size:x-large;
+}
+
+img{
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+}
+
+.card{
+    border-radius: 25%;
+    border: 5px solid red;
+}

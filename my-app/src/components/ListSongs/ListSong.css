@@ -1,0 +1,30 @@
+.item-list {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item-list:hover {
+  background-color: #474a48;
+  margin: 6px;
+  padding: 4px;
+  border-radius: 20px;
+}
+
+.item-list img {
+  margin-left: 12px;
+  height: 2.8rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+
+.song-information {
+    display: flex;
+    align-items: center;
+  }
+  
+  .song-information p {
+    margin-left: 12px;
+  }

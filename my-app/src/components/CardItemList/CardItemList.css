@@ -1,0 +1,34 @@
+.card-list-song {
+    padding: 14px 0;
+  }
+  
+  .card-list-item {
+    background-color: #474a48;
+    border: 0.1rem solid gray;
+    border-radius: 12px;
+    width: 9rem;
+    margin: 0 0 0 1.5rem;
+    padding: 0 0 15px 0;
+  }
+  
+  .card-list-item:hover {
+    background-color: #909590;
+    margin-top: 15px;
+    padding-bottom: 0 !important;
+  }
+  
+  .card-list-item img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+  
+  .card-body {
+    margin: 4px 8px;
+  }
+  
+  .card-list-song {
+    margin: 14px 0;
+    display: flex;
+  }
+  
