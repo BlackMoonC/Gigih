@@ -5,8 +5,8 @@ const {
   postDataById,
 } = require("../controllers/products.controller");
 
-router.post("/post", postDataById);
+router.post("/post/:id_video", postDataById);
 
-router.get("/getAllData", getAllData);
+router.get("/getAllData/:id_video", getAllData);
 
 module.exports = router;

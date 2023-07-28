@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 
 const videoSchema = mongoose.Schema({
+  title: {
+    type: "string",
+    required: true,
+  },
   url_image: {
     type: "string",
     required: true,

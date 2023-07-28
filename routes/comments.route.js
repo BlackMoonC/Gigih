@@ -5,7 +5,7 @@ const {
 } = require("../controllers/comments.controller");
 const router = express.Router();
 
-router.get("/getAllData", getListComment);
-router.post("/post", submitComment);
+router.get("/getAllData/:id_video", getListComment);
+router.post("/post/:id_video", submitComment);
 
 module.exports = router;

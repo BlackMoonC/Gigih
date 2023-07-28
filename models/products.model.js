@@ -13,6 +13,10 @@ const productSchema = new mongoose.Schema({
     required: true,
     type: "string",
   },
+  id_video: {
+    required: true,
+    type: "string",
+  },
 });
 
 module.exports = mongoose.model("Product", productSchema);

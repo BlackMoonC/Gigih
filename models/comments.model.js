@@ -10,6 +10,10 @@ const commentSchema = mongoose.Schema(
       type: "string",
       required: true,
     },
+    id_video: {
+      required: true,
+      type: "string",
+    },
   },
   { timeStamps: true }
 );
