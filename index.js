@@ -5,7 +5,9 @@ const mongoose = require("mongoose");
 const mongoString = process.env.DATABASE_URL;
 
 // List routes
-const productRoute = require("./routes/product.route");
+const productRoute = require("./routes/products.route");
+const commentsRoute = require("./routes/comments.route");
+const videosRoute = require("./routes/videos.route");
 
 // Mongoose configuration
 mongoose.connect(mongoString);
@@ -31,6 +33,8 @@ app.use(
 );
 
 app.use("/products", productRoute);
+app.use("/comments", commentsRoute);
+app.use("/videos", videosRoute);
 
 app.listen(3000, () => {
   console.log(`Server listening on http://localhost:${3000}`);
