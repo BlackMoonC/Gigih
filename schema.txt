@@ -3,18 +3,18 @@ category{
 }
 
 item{
-    imgUrl: "string",
+    - imgUrl: "string",
     timeWatch: number,
     live: boolean,
     offerCondition: boolean,
     specialOffers: string,
-    title: "string",
-    toko: string,
+    - title: "string",
+    - toko: string,
 }
 
 videoThumbnailList{
-    videoId: string,
-    urlImage: string,
+    - videoId: string,
+    - urlImage: string,
 }
 
 productList{
