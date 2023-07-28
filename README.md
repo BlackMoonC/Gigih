@@ -74,6 +74,10 @@ Untuk models nya terdiri dari:
         videos.model.js
 
 
-## List API request and response (preference format gist)
+## 3.   List API request and response (preference format gist)
 
-## How to run in local (make sure grader can run your API in grader local machine after following your “how to run”!)
+URL for published documentation requests and responses API
+https://documenter.getpostman.com/view/17081705/2s9XxsUwBX
+
+
+## 4.   How to run in local (make sure grader can run your API in grader local machine after following your “how to run”!)
