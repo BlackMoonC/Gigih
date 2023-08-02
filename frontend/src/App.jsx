@@ -1,41 +1,70 @@
-import Avatar from "./components/Avatar/Avatar";
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+const baseUrl = "http://localhost:8080"
+
 import "./App.css";
-// import CardItemList from "./components/CardItemList/CardItemList";
+import CardItemList from "./components/CardItemList/CardItemList";
 // import Avatar from './components/Avatar/Avatar'
-// import ListSongs from "./components/ListSongs/ListSongs";
+import ListSongs from "./components/ListSongs/ListSongs";
 
 function App() {
-  const heroes = [
-    {
-      id: 1,
-      name: "Hellen Keller",
-      imgUrl:
-        "https://images.unsplash.com/photo-1580034283351-073a1906f7ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=733&q=80",
-      gender: "female",
-    },
-    {
-      id:2,
-      name: "Marie Culler",
-      imgUrl:
-        "https://images.unsplash.com/photo-1580034283351-073a1906f7ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=733&q=80",
-        gender: "female",
-    },
-    {
-      id:3,
-      name: "Albert Einstein",
-      imgUrl:
-        "https://images.unsplash.com/photo-1580034283351-073a1906f7ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=733&q=80",
-        gender: "male",
-      },
-  ];
+  const [songs, setSongs] = useState(null);
+  const [mostPlayedSongs, setMostPlayedSongs] = useState(null);
+
+  useEffect(() => {
+    const songs = async() => {
+      try{
+        axios.get(`${baseUrl}/songs`).then((response) => {
+          const songs = response.data;
+          console.log(songs);
+          setSongs(songs.data);
+        })
+        axios.get(`${baseUrl}/songs/most-played`).then((response) => {
+          const songs = response.data;
+          setMostPlayedSongs(songs.data);
+        })
+
+      } catch (err) {
+        console.error(err);
+      }
+    }
+    songs();
+  }, []);  
 
   return (
     <>
-    {
-      heroes.map((hero) => (
-        <Avatar key={hero.id} name={hero.name} imgUrl= {hero.imgUrl} gender={hero.gender}/>
-      ))
-    }
+      <header>
+        <h1>Spotify</h1>
+      </header>
+      <main>
+        <section id="all-songs">
+          <h1>All Songs</h1>
+          <div className="list-song">
+            {
+              songs.map((song) => (
+                <ListSongs key={song.id} title={song.title}/>
+              ))
+            }
+          </div>
+        </section>
+        <section id="most-played-songs">
+          <h1 className="title">Most Played Songs</h1>
+          <div className="list-song">
+          {
+              mostPlayedSongs.map((song) => (
+                <ListSongs key={song.id} title={song.title}/>
+              ))
+            }
+          </div>
+        </section>
+        <section>
+          <h1 className="title">Your Playlist</h1>
+          <div className="card-list-song">
+            
+          </div>
+        </section>
+      </main>
+      <footer></footer>
     </>
   );
 }

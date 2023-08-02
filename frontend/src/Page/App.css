@@ -1,0 +1,41 @@
+* {
+  margin: 0 0;
+  padding: 0 0;
+}
+
+body {
+  background-color: #2c302e;
+  margin: 0 0 36px 0;
+}
+
+header {
+  background-color: green;
+  padding: 10px 14px;
+}
+
+main {
+  margin: 24px;
+}
+h1,
+h3,
+p {
+  color: white;
+}
+
+ol {
+  margin-left: 14px;
+  font-size: x-large;
+}
+
+ol p {
+  color: black;
+}
+
+button {
+  background-color: transparent;
+  border: transparent;
+}
+
+section {
+  margin: 24px 9px;
+}
